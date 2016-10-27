@@ -1,80 +1,97 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/lytContainer"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@android:color/white"
-    android:paddingBottom="10dip"
-    android:paddingTop="10dip" >
+    android:background="@android:color/white">
 
-    <TextView
-        android:id="@+id/BEACON_uuid"
-        android:layout_width="fill_parent"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:gravity="left|top" >
-    </TextView>
+        android:orientation="vertical"
+        android:padding="10dp">
+        <!--MAC & TYPE & BT NAME-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+            <!--MAC-->
+            <TextView
+                android:id="@+id/BEACON_MAC"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <!--BT NAME-->
+            <TextView
+                android:id="@+id/BEACON_BTName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+            <!--TYPE-->
+            <TextView
+                android:id="@+id/BEACON_TYPE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:layout_weight="1"  />
+        </LinearLayout>
 
-    <TextView
-        android:id="@+id/BEACON_major"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/BEACON_uuid"
-        android:layout_marginTop="5dp"
-        android:gravity="left|top" >
-    </TextView>
+        <!--UUID-->
+        <TextView
+            android:id="@+id/BEACON_uuid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <!--MAJOR & MINOR-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/BEACON_major"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
 
-    <TextView
-        android:id="@+id/BEACON_minor"
-        android:layout_width="wrap_content"
+            <TextView
+                android:id="@+id/BEACON_minor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"/>
+        </LinearLayout>
+        <!--PROXIMITY (GONE)-->
+        <TextView
+            android:id="@+id/BEACON_proximity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/BEACON_uuid"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/BEACON_major"
-        android:gravity="left|top" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/BEACON_proximity"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/BEACON_major"
-        android:layout_marginTop="5dp"
-        android:gravity="left|top" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/BEACON_rssi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BEACON_major"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/BEACON_proximity"
-        android:gravity="left|top" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/BEACON_txpower"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BEACON_major"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="5dp"
-        android:layout_toRightOf="@+id/BEACON_rssi"
-        android:gravity="left|top" >
-    </TextView>
-
-    <TextView
-        android:id="@+id/BEACON_range"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/BEACON_proximity"
-        android:layout_marginLeft="10dip"
-        android:layout_marginTop="5dp"
-        android:gravity="left|top" >
-    </TextView>
+        android:orientation="horizontal">
+        <!--RSSI-->
+        <TextView
+            android:id="@+id/BEACON_rssi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <!--tx POWER-->
+        <TextView
+            android:id="@+id/BEACON_txpower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+        <!--Distance-->
+        <TextView
+            android:id="@+id/BEACON_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"/>
+        </LinearLayout>
+        <!--TLM Data-->
+        <TextView
+            android:id="@+id/BEACON_TLM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
 
 </RelativeLayout>

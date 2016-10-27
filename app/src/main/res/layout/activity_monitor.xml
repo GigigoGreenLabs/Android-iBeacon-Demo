@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dip"
-    tools:context=".RangingActivity" >
+    tools:context=".MonitoringActivity" >
 
     <TextView
         android:layout_width="fill_parent"
@@ -14,9 +14,10 @@
 
     <ListView
         android:id="@+id/list"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:divider="@android:color/darker_gray"
+        android:scrollbars="vertical"
         android:dividerHeight="1dip" />
 
 </RelativeLayout>

@@ -73,3 +73,32 @@ public class MainActivity extends Activity {
 	}
 
 }
+
+
+/*SNIPPED*/
+
+/*MONITORIE REGION DE EDDYSTONE
+* // Set the two identifiers below to null to detect any beacon regardless of identifiers
+        Identifier myBeaconNamespaceId = Identifier.parse("0x2f234454f4911ba9ffa6");
+        Identifier myBeaconInstanceId = Identifier.parse("0x000000000001");
+        Region region = new Region("my-beacon-region", myBeaconNamespaceId, myBeaconInstanceId, null);
+        mBeaconManager.setMonitorNotifier(this);
+*
+*
+* */
+/*EMIITING LIKE EDDYSTONE
+* mBeaconManager = BeaconManager.getInstanceForApplication(this.getApplicationContext());
+        // Detect the main Eddystone-UID frame:
+        mBeaconManager.getBeaconParsers().add(new BeaconParser().
+                setBeaconLayout("s:0-1=feaa,m:2-2=00,p:3-3:-41,i:4-13,i:14-19"));
+        // Detect the telemetry Eddystone-TLM frame:
+        mBeaconManager.getBeaconParsers().add(new BeaconParser().
+                setBeaconLayout("x,s:0-1=feaa,m:2-2=20,d:3-3,d:4-5,d:6-7,d:8-11,d:12-15"));
+        mBeaconManager.bind(this);
+*
+*
+*
+*
+
+
+ */

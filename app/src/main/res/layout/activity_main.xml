@@ -8,8 +8,8 @@
         android:id="@+id/monitor_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/range_button"
+        android:layout_centerInParent="true"
         android:onClick="onMonitoringClicked"
-        android:text="Monitoring" />
+        android:text="Start Monitoring" />
 
 </RelativeLayout>
