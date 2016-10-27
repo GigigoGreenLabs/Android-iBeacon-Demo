@@ -388,7 +388,7 @@ public class MonitoringActivity extends Activity implements BeaconConsumer {
             holder.beacon_major.setText("InstanceID: " + beaconItem.getId2());
             holder.beacon_rssi.setText("Rssi: " + beaconItem.getRssi());
             holder.beacon_txpower.setText("TxPower: " + beaconItem.getTxPower());
-            holder.beacon_range.setText("DistanceOLD: " + formatDistanceDecimals(beaconItem.getDistance())+"m\nDistance: " + formatDistanceDecimals(BeaconType.calculateDistanceWithRefRSSI0(beaconItem.getTxPower(), beaconItem.getRssi()))+"m"); //todo esto no es correcto
+            holder.beacon_range.setText("DistanceOLD: " + formatDistanceDecimals(beaconItem.getDistance())+"m\nDistanceNEW: " + formatDistanceDecimals(BeaconType.calculateDistanceWithRefRSSI0(beaconItem.getTxPower(), beaconItem.getRssi()))+"m"); //todo esto no es correcto
 
             showEddyStoneTLMData(holder, beaconItem);
 

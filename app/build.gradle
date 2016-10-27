@@ -31,5 +31,7 @@ dependencies {
   compile 'com.android.support:appcompat-v7:23.1.0'
   compile 'com.android.support:design:23.1.0'
  // compile 'org.altbeacon:android-beacon-library:2+'
+
+  //4 debugging!!, change to 2.9.1-beta1
   compile project (':myaltbeacon')
 }
